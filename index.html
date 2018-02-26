@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset='UTF-8' />
+        <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+      
+        <title>jQuery.simpleFAQ QUnit Test Runner</title>
+        <script src='jquery.js'></script>
+        <script src='src/threesixty.js'></script>
+        <link rel="stylesheet" href="src/styles/threesixty.css">
+    </head>
+    <body>
+        <div class="threesixty product1">
+            <div class="spinner">
+                <span>0%</span>
+            </div>
+            <ol class="threesixty_images"></ol>
+        </div>
+        <script type="text/javascript">
+            window.onload = init;
+        
+            var product;
+            function init(){
+        
+              product1 = $('.product1').ThreeSixty({
+                totalFrames: 47, // Total no. of image you have for 360 slider
+                endFrame: 47, // end frame for the auto spin animation
+                currentFrame: 1, // This the start frame for auto spin
+                imgList: '.threesixty_images', // selector for image list
+                progress: '.spinner', // selector to show the loading progress
+                imagePath:'img/model/', // path of the image assets
+                filePrefix: '', // file prefix if any
+                ext: '.png', // extention for the assets
+                height: 560,
+                width: 447,
+                navigation: true,
+                responsive: true
+              });
+        
+            }
+        
+          </script>
+    </body>
+</html>
